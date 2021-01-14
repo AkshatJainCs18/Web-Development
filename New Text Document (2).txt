@@ -1,0 +1,6 @@
+Xampp:
+html+css+js=front end
+php+mysql=backend databse connection
+html+css\
++js
++php+database in that order
