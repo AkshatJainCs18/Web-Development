@@ -26,7 +26,7 @@ function validateForm() {
 </head>
 <body>
 
-<form name="FORM" action="test.php" onsubmit="return validateForm()" method="post">
+<form name="FORM" action="Question1.php" onsubmit="return validateForm()" method="post">
   Name: <input type="text" name="name"><br>
   EMAIL<input type="email" name="email" required ><br>
   CONTACT<input type="text" name="contact" ><br>
