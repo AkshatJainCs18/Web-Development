@@ -1,6 +1,16 @@
 <?php
 if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $contact = $_POST['contact'];
+    $city = $_POST['city'];
+    $course = $_POST['course'];
     $interest = $_POST['interest'];
+   
+    echo "Name : $name <br/>";
+        echo "Email : $email <br/>";
+        echo "Contact : $contact <br/>";
+        echo "Course : $course <br/>";
     if (sizeof($interest) < 3||sizeof($interest)>5) {
         echo "At least select any 3 and at max 5 Interests.";}}
 
