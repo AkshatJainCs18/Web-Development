@@ -3,8 +3,8 @@ if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $contact = $_POST['contact'];
-    $city = $_POST['city'];
-    $course = $_POST['course'];
+    $city = $_POST['City'];
+    $course = $_POST['Course'];
     $interest = $_POST['interest'];
    
     echo "Name : $name <br/>";
@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
         echo "At least select any 3 and at max 5 Interests.";}}
 
     ?>
-<!DOCTYPE html>
+
 <html>
 <head>
 <script>
@@ -60,13 +60,13 @@ function validateForm() {
         Programming<input type="checkbox" name="interest[]" value="Programming">
         Cricket<input type="checkbox" name="interest[]" value="Cricket">
         Football<input type="checkbox" name="interest[]" value="Football">
-        Reading<input type="checkbox" name="interest[]" value="Reading">
+        Reading<insput type="checkbox" name="interest[]" value="Reading">
         Singing<input type="checkbox" name="interest[]" value="Singing">
         Painting<input type="checkbox" name="interest[]" value="Paiting">
         <br>
 
 
-  <input type="submit" value="Submit">
+  <input type="submit" name="submit" value="Submit">
 </form>
 
 </body>
