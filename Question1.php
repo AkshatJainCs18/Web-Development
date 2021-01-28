@@ -71,9 +71,9 @@ function validateForm() {
 <body>
 
 <form name="FORM" action="Question1.php" onsubmit="return validateForm()" method="post">
-  Name: <input type="text" name="name"><br>
+  Name: <input type="text" name="name" required><br>
   EMAIL<input type="email" name="email" required ><br>
-  CONTACT<input type="text" name="contact" ><br>
+  CONTACT<input type="text" name="contact" required><br>
   CITY<select  name="City" >
                  <option>Dehradun</option>
                  <option>Delhi</option>
