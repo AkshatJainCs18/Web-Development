@@ -63,7 +63,8 @@ function validateForm() {
       }
   }
     if(c<3 || c>5)
-    alert("At least 3 interests and at max 5 interests");
+     {alert("At least 3 interests and at max 5 interests");return false;}
+    return true;
   
 }
 </script>
