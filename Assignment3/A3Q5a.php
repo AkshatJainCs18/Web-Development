@@ -31,7 +31,7 @@ include ('config.php');
 if(isset($_POST['submit']))
 {
 
-$username=$_POST['username'];
+ $username=$_POST['username'];
 
 $sql = "SELECT * FROM users where username='".$username."'" ;
 $result = $conn->query($sql);
