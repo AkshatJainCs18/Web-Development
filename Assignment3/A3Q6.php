@@ -18,4 +18,4 @@ function checkData()
   <input type="button" value ="Submit" onClick="checkData();">
   </form>
   <body>
-  </html>
+   </html>
