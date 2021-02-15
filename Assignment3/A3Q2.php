@@ -7,7 +7,7 @@ Enter Second Variable:<input type="text" name="var2" required><br>
 <input type="submit" name="submit" value="Caclulate">
 </form>
 </body>
-</html>
+ </html>
 <?php
 if(isset($_POST['submit']))
 {
