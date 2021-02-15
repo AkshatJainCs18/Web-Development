@@ -28,7 +28,7 @@ $result = $conn->query($sql);
 
 ?>
 
-<table border='1' >
+<table border='1'  >
     <tr>
     <th>Name</th>
     <th>Email</th>
