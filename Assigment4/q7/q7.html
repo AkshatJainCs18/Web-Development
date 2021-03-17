@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>
+            CSV
+        </title>
+        <script  src='data1.js'></script>
+
+    </head>
+    <body>
+      
+        <script>
+           var res=[];
+             const re=[];
+             re[0]="tweet id";
+             re[1]="full txt";
+             re[2]='userid';
+             re[3]='username';
+             re[4]='profile date';
+             re[5]='friends';
+             re[6]='follow'
+             re[7]='tweet count'
+             re[8]="verified"
+             re[9]="location";
+             re[10]='lang';
+             res[0]=re;
+             for(x=0;x<data.length;x++)
+            {
+                var ans=[];
+                i=0;
+                ans[i]=data[x]['id'];
+                i++;
+                ans[i]=data[x]['full_text'];
+                i++;
+                ans[i]=data[x]['user']['name'];
+                i++;
+                ans[i]=data[x]['user']['id'];
+                i++;
+                ans[i]=data[x]['user']['created_at'];
+                i++;
+                ans[i]=data[x]['user']['friends_count'];
+                i++;
+                ans[i]=data[x]['user']['statuses_count'];
+                i++;
+                ans[i]=data[x]['user']['location'];
+                i++;
+                ans[i]=data[x]['user']['verified'];
+                i++;
+                ans[i]=data[x]['user']['location'];
+                i++;
+                ans[i]=data[x]['metadata']['iso_language_code'];
+                res[x+1]=ans;
+
+            }
+          // console.log(res);
+            //let csv="data:text/csv;charset=utf-8,";
+            var cs="data:text/csv;charset=utf-8,";
+            res.forEach(function(rowarray){
+    
+               
+                 let row=rowarray.join(",");
+                 console.log(row);
+                cs+=row+"\r\n";
+
+            });
+            /*let csv="data:text/csv;charset=utf-8,";
+            for(j=0;j<re.length;j++){
+            for(i=0;i<re[i].length;i++)
+            {
+
+
+            }*/
+           
+            //console.log(cs);
+            url=encodeURI(cs);
+            window.open(url);
+          
+
+
+        </script>
+
+    </body>
+</html>

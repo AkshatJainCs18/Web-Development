@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Javascript Div</title>
+        <style>
+           div {
+               position:absolute;
+               width: 200px;
+               height: 200px;
+               top: 100px;
+               right: 100px;
+               border:1px solid black;
+               background-color: cadetblue;
+               border-radius: 0%;
+           }
+           
+        </style>
+    </head>
+    <body>
+        <div id="div1" onclick="interval()">
+
+        </div>
+        <p id="ans">
+
+        </p>
+        <script>
+
+           
+           /* function genrate()
+                {
+                    var d=['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+                s='#';
+                low=0;
+                high=15;
+                for(i=0;i<=5;i++){
+                colour=low+Math.floor(Math.random()*(high+1+low));
+                s=s+d[colour];
+                }
+                console.log(s);
+                return s;
+                }*/
+           /* function changecolor(){
+                //ele=document.getElementById('div1');
+                //ele.setAttribute('background-color','yellow');
+               d.style.backgroundColor=genrate();
+               changedim();
+            }*/
+            arr=[];
+            val=700;
+            for(j=1;j<=500;j++)
+            {
+                arr[j]=val;
+                val++;
+            }
+            function interval()
+            {
+                rand=Math.floor(Math.random()*500)+1;
+                document.getElementById('ans').innerHTML='Response Time is '+arr[rand];
+                time=setTimeout(changedim,arr[rand]);
+            }
+
+           function changedim()
+            {
+                 d=document.getElementById('div1');
+                x=Math.floor(Math.random()*3)+1;
+                
+                if(x==1){
+                d.style.width="300px";
+                d.style.borderRadius="0%";
+                }
+                else if(x==2){
+                d.style.borderRadius="50%";
+                d.style.width="200px";
+                }
+                else{
+                    d.style.width="200px";
+                    d.style.borderRadius="0%";
+                }
+                x='#'+Math.floor(Math.random()*0xffffff).toString(16);
+                d.style.backgroundColor=x;
+                d.style.top=(100*Math.random())+'%';
+                d.style.right=(100*Math.random())+'%';
+            }
+
+        
+        </script>
+      
+    </body>
+</html>
